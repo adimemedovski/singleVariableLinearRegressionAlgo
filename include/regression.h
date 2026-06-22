@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <inttypes.h>
+#include <stdbool.h>
 
 struct LinearRegression {
   double gradient;
@@ -23,7 +24,7 @@ struct DataPoint {
  * in a given dataset.
  */
 struct DataPoints {
-  struct DataPoint* dataPoints;
+  struct DataPoint* datas;
   uint64_t capacity;
   uint64_t size;
 };
@@ -35,5 +36,37 @@ struct DataPoints {
  */
 void initialiseDataPoints(struct DataPoints* dataPoints);
 
+/*
+ * Allocates double the capacity of memory for the datas array.
+ */
+bool expandDatas(struct DataPoints* dataPoints);
+
+/*
+ * Adds a data point to the array datas inside of data points.
+ */
+void addDataPoint(struct DataPoints* dataPoints, struct DataPoint dataPoint);
+
+/*
+ * Takes the summand of the x-values in datas.
+ */
+double sumX(struct DataPoints dataPoints);
+
+/*
+ * Takes the summand of the y-values in datas.
+ */
+double sumY(struct DataPoints dataPoints);
+
+/*
+ * Takes the summand of the product x and y values in datas.
+ */
+double sumProductXY(struct DataPoints dataPoints);
+
+/*
+ * Takes the summand of the squared x value in datas.
+ */
+double sumSquaredX(struct DataPoints dataPoints);
+
 #endif
+
+
 
