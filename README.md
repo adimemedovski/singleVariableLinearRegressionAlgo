@@ -1,4 +1,4 @@
-# Single Variable Linear Regression (Simple Linear Regression Model)
+# Single Variable Linear Regression (Simple Linear Regression Model) from Scratch in C
 ## My Approach (Mathematical Explanation and Derivation)
 I approached linear regression from a mathematical perspective. I understood the concept of a loss function, this then allowed me to connect
 my knowledge of Calculus to the principle of minimising the loss function.
