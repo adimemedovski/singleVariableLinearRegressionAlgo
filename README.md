@@ -5,19 +5,18 @@ my knowledge of Calculus to the principle of minimising the loss function.
 
 I understood that the loss function was simply: 
 
-$$L(x, y) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y})^{2} \quad (1.1)$$
+$$L(m, b) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y})^{2} \quad (1.1)$$
 
-where $\hat{y}$ is the predicted dependent variable at each data point, and $y_{i}$ is the actual value of the dependent variable at each data points index, $i$. In a practical 
-sense, this index would simply be each line in the sampleData csv file not including the first line.
+where $\hat{y}$ is the predicted dependent variable at each data point, and $y_{i}$ is the actual value of the dependent variable at the $i-$th datapoint.
 
 We can rewrite $(1.1)$ as:
 
-$$L(x, y) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - m x_{i} - b)^{2} \ (1.2)$$
+$$L(m, b) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - m x_{i} - b)^{2} \ (1.2)$$
 
 Now, a large problem in linear regression is minimising this loss function. Because this is a simple linear regression model (consisting 
 of a single independent variable), we can optimally apply the concept of partial derivatives in solving this problem.
 
-Taking the partial derivative of $L$ with respect to the gradient, $m$, yields:
+Taking the partial derivative of $L$ with respect to the slope, $m$, yields:
 
 $$
 \begin{aligned}
@@ -92,8 +91,6 @@ $$
 
 Substituting $(1.7)$ into $(1.5)$:
 
-Substituting $(1.7)$ into $(1.5)$:
-
 $$
 \begin{aligned}
 -m\sum_{i=1}^{n}x_i^2 - \left(\frac{\sum_{i=1}^{n}y_i - m\sum_{i=1}^{n}x_i}{n}\right)\sum_{i=1}^{n}x_i + \sum_{i=1}^{n}x_iy_i &= 0
@@ -136,4 +133,4 @@ are what allow us to directly calculate the gradient, $m$, and intercept, $b$ fo
 ## Reflections
 It really helped in approaching linear regression from this mathematical perspective as a beginner, as it does not suggest you rely on intuition, or animations depicting linear regression, but rather rigorous mathematical derivations.
 
-I'd like to further explore regression from the standpoint of multiple variables in my next project, also through a mathematical lens. 
+I'd like to further explore regression from the standpoint of multiple independent variables in my next project, also through a mathematical lens. 
