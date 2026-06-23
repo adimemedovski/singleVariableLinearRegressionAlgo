@@ -129,8 +129,4 @@ b =
 $$
 
 are what allow us to directly calculate the slope, $m$, and intercept, $b$ for which our loss function is minimised. This is in particular the results I made use of within my program. 
-
-## Reflections
-It really helped in approaching linear regression from this mathematical perspective as a beginner, as it does not suggest you rely on intuition, or animations depicting linear regression, but rather rigorous mathematical derivations.
-
-I'd like to further explore regression from the standpoint of multiple independent variables in my next project, also through a mathematical lens. 
+ 
