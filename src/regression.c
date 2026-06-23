@@ -33,7 +33,7 @@ bool expandDatas(struct DataPoints* dataPoints) {
 }
 
 void addDataPoint(struct DataPoints* dataPoints, struct DataPoint dataPoint) {
-  if (dataPoints -> size == dataPoints -> capacity) {
+  if (dataPoints -> size >= dataPoints -> capacity) {
     if (expandDatas(dataPoints)) {
       dataPoints -> datas[dataPoints -> size] = dataPoint;
       dataPoints -> size += 1;
@@ -88,5 +88,27 @@ double sumSquaredX(struct DataPoints dataPoints) {
 
   return sum;
 }
+
+struct LinearRegression analyticalMethod(struct DataPoints dataPoints) {
+  struct LinearRegression linearRegression; 
+
+  double gradientNumerator = sumY(dataPoints) * sumX(dataPoints) - dataPoints.size * sumProductXY(dataPoints);
+  double gradientDenominator = pow(sumX(dataPoints), 2) - dataPoints.size * sumSquaredX(dataPoints);
+  double gradient = gradientNumerator / gradientDenominator;
+
+  double interceptNumerator = sumY(dataPoints) - gradient * sumX(dataPoints);
+  double interceptDenominator = dataPoints.size;
+  double intercept = interceptNumerator / interceptDenominator;
+
+  linearRegression.gradient = gradient;
+  linearRegression.intercept = intercept;
+  
+  return linearRegression;
+}
+
+
+
+
+
 
 

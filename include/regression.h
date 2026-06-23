@@ -66,6 +66,13 @@ double sumProductXY(struct DataPoints dataPoints);
  */
 double sumSquaredX(struct DataPoints dataPoints);
 
+/*
+ * Computes the optimised gradient and intercept values using the 
+ * analytical approach for linear regression. This is most efficient 
+ * for simple linear regression and when datasets are small.
+ */
+struct LinearRegression analyticalMethod(struct DataPoints dataPoints);
+
 #endif
 
 
