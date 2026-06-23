@@ -5,7 +5,7 @@ my knowledge of Calculus to the principle of minimising the loss function.
 
 I understood that the loss function was simply: 
 
-$$L(m, b) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y})^{2} \quad (1.1)$$
+$$L(m, b) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2} \quad (1.1)$$
 
 where $\hat{y}$ is the predicted dependent variable at each data point, and $y_{i}$ is the actual value of the dependent variable at the $i-$th datapoint.
 
