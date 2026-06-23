@@ -12,7 +12,7 @@ sense, this index would simply be each line in the sampleData csv file not inclu
 
 We can rewrite $(1.1)$ as:
 
-$$L(x, y) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - m x_{i} - b)^{2} \ (1.1)$$
+$$L(x, y) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - m x_{i} - b)^{2} \ (1.2)$$
 
 Now, a large problem in linear regression is minimising this loss function. Because this is a simple linear regression model (consisting 
 of a single independent variable), we can optimally apply the concept of partial derivatives in solving this problem.
@@ -131,4 +131,9 @@ b =
 \qquad (1.10)
 $$
 
-are what allow us to directly calculate the gradient, $m$, and intercept, $b$ for which our loss function is minimised. This is in particular the results I made use of within my program. It really helped in approaching linear regression from this mathematical perspective as a beginner, as it does not suggest you rely on intuition, or animations depicting linear regression, but rather rigorous mathematical derivations.  
+are what allow us to directly calculate the gradient, $m$, and intercept, $b$ for which our loss function is minimised. This is in particular the results I made use of within my program. 
+
+## Reflections
+It really helped in approaching linear regression from this mathematical perspective as a beginner, as it does not suggest you rely on intuition, or animations depicting linear regression, but rather rigorous mathematical derivations.
+
+I'd like to further explore regression from the standpoint of multiple variables in my next project, also through a mathematical lens. 
