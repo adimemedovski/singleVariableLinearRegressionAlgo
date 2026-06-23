@@ -7,7 +7,7 @@ I understood that the loss function was simply:
 
 $$L(m, b) = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2} \quad (1.1)$$
 
-where $\hat{y}_{i}$ is the predicted dependent variable at each data point, and $y_{i}$ is the actual value of the dependent variable at the $i-$th datapoint.
+where $\hat{y_{i}}$ is the predicted dependent variable at each data point, and $y_{i}$ is the actual value of the dependent variable at the $i-$th datapoint.
 
 We can rewrite $(1.1)$ as:
 
